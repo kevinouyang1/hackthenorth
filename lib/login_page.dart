@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+import 'main_scaffolding/main_scaffold.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -9,6 +13,17 @@ class _LoginPageState extends State<LoginPage> {
   final usernameEditingController = TextEditingController();
   final passwordEditingController = TextEditingController();
 
+  _showLoadDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => new SpinKitRing(
+        size: 100.0,
+        lineWidth: 15.0,
+        color: Color(0xFF0776BD),
+      )
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -149,9 +164,14 @@ class _LoginPageState extends State<LoginPage> {
                   top: 680,
                   left: 100,
                   child: RaisedButton(
-                      onPressed: () {
-                        print(_username);
-                        print(_password);
+                      onPressed: () async {
+                        if (_username == "kevinouyang1" && _password == "0987KevinOuyang") {
+                          _showLoadDialog();
+                          await Future.delayed(Duration(milliseconds: 900));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => MainScaffold()));
+                        } else {
+                          print("Not correct");
+                        }
                       },
                       color: Color(0xFF0776BD),
                       shape: RoundedRectangleBorder(
