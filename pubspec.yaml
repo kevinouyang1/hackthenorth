@@ -31,6 +31,8 @@ dependencies:
   url_launcher: ^5.7.10
   flutter_spinkit: ^4.1.2+1
   flappy_search_bar: ^1.7.2
+  carousel_slider: ^2.3.1
+
 
 
 
@@ -52,6 +54,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/LogoWhite.png
+    - assets/uw1.jpg
+    - assets/uw2.jpg
+    - assets/uw3.jpg
+    - assets/uw4.jpeg
+    - assets/dtPhoto.png
+    - assets/uoftLogo.jpg
+    - assets/uoft2.jpg
 
 
 
