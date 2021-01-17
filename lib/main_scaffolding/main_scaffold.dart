@@ -25,6 +25,7 @@ class _MainScaffoldState extends State<MainScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         backgroundColor: Color(0xFF0776BD),
         title: Text("UniFinder"),
       ),
