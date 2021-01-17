@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
+import 'package:unifinder/models/program_expanded.dart';
 import 'package:unifinder/searchbar/university.dart';
+import 'package:unifinder/models/university_expanded.dart';
 
 class University {
   final String name;
@@ -48,7 +50,7 @@ class _UniversitySearchState extends State<UniversitySearch> {
           onItemFound: (University university, int index) {
             return GestureDetector(
               onTap: () {
-
+                Navigator.push(context, MaterialPageRoute(builder: (context) => UniversityPage()));
               },
               child: Container(
                   child: Padding(

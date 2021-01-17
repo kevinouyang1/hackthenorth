@@ -4,13 +4,13 @@ import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'images.dart';
 
-class programPage extends StatefulWidget {
+class ProgramPage extends StatefulWidget {
   @override
-  ProgramPagesState createState() => ProgramPagesState();
+  _ProgramState createState() => _ProgramState();
 
 }
 
-class ProgramPagesState extends State<programPage> {
+class _ProgramState extends State<ProgramPage> {
   @override
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
@@ -34,7 +34,7 @@ class ProgramPagesState extends State<programPage> {
                 elevation: 5,
                 onPressed: () async {
                   print('clicked');
-                  const url = 'https://google.com';
+                  const url = 'https://discover.engineering.utoronto.ca/programs/engineering-programs/engineering-science/';
                   if (await canLaunch(url)) {
                     await launch(url);
                   }
@@ -415,7 +415,6 @@ class ProgramPagesState extends State<programPage> {
                                           ),
                                         ),
                                       )
-
                                     ],
                                   ),
                                 ),

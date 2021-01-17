@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
+import 'package:unifinder/models/university_expanded.dart';
 import 'search_programs.dart';
+import 'package:unifinder/models/program_expanded.dart';
 
 class Program {
   final String name;
@@ -50,7 +52,7 @@ class _ProgramSearchState extends State<ProgramSearch> {
         onItemFound: (Program program, int index) {
           return GestureDetector(
             onTap: () {
-
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProgramPage()));
             },
             child: Container(
               child: Padding(

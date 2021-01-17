@@ -5,12 +5,12 @@ import 'package:url_launcher/url_launcher.dart';
 import 'images.dart';
 
 
-class loginPage extends StatefulWidget {
+class UniversityPage extends StatefulWidget {
   @override
-  loginPageState createState() => loginPageState();
+  UniversityPageState createState() => UniversityPageState();
 }
 
-class loginPageState extends State<loginPage> {
+class UniversityPageState extends State<UniversityPage> {
   @override
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
@@ -34,7 +34,7 @@ class loginPageState extends State<loginPage> {
                 elevation: 5,
                 onPressed: () async {
                   print('clicked');
-                  const url = 'https://stackoverflow.com/questions/59461065/error-in-flutter-the-url-launcher-is-not-working';
+                  const url = 'https://uwaterloo.ca/';
                   if (await canLaunch(url)) {
                     await launch(url);
                   }
